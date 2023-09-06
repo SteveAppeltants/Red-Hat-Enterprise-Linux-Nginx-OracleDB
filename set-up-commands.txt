@@ -1,0 +1,124 @@
+-------------------------------------------------------
+RED HAT ENTERPRISE LINUX
+-------------------------------------------------------
+
+The Universal Base Image is designed and engineered to be 
+the base layer for all of your containerized applications, middleware and utilities. 
+This base image is freely redistributable, but Red Hat only supports 
+Red Hat technologies through subscriptions for Red Hat products. 
+This image is maintained by Red Hat and updated regularly.
+
+docker pull redhat/ubi8:latest
+FROM registry.access.redhat.com/ubi8/ubi
+
+# Create images for RHEL
+------------------------
+# NGINX
+-------
+docker build -t my-nginx-image .
+
+# ORACLE DATABASE
+-----------------
+./buildContainerImage.sh -v 11.2.0.2 -x -i
+
+# Start NGINX based on the RHEL image
+docker-compose up
+
+-------------------------------------------------------
+ORACLE and ORACLE XE 11G SQL*PLUS
+-------------------------------------------------------
+
+# Oracle, Dockerfile and Scripts
+--------------------------------
+
+https://github.com/oracle/docker-images
+
+# oracle-xe-11g
+---------------
+
+https://www.iea-software.com/ftp/emeraldv5/linux/ora/
+
+# MD5 checksum
+--------------
+
+dd7881a55569d890241f11cd0eeb7d48
+
+# The image docker build script is
+----------------------------------
+
+OracleDatabase/SingleInstance/dockerfiles/buildContainerImage.sh
+
+oracle-xe-11.2.0-1.0.x86_64.rpm.zip
+
+OracleDatabase/SingleInstance/dockerfiles/11.2.0.2
+├── 11.2.0.2
+│   ├── Checksum.xe
+│   ├── Dockerfile.xe
+│   ├── checkDBStatus.sh
+│   ├── oracle-xe-11.2.0-1.0.x86_64.rpm.zip
+│   ├── runOracle.sh
+│   ├── setPassword.sh
+│   └── xe.rsp
+
+## Build Image
+--------------
+# Start the script
+------------------
+
+buildContainerImage.sh
+
+./buildContainerImage.sh -v 11.2.0.2 -x -i
+
+# Result in the console
+-----------------------
+
+Oracle Database container image for 'xe' version 11.2.0.2 is ready to be extended: 
+    --> oracle/database:11.2.0.2-xe
+  Build completed in 42 seconds.
+
+## Start Image
+--------------
+
+docker run --name myoracle \
+--shm-size=2g \
+-p 1521:1521 -p 9090:8080 \f
+-e ORACLE_PWD=mypass \
+-v [<host mount point>:]/u01/app/oracle/oradata \
+oracle/database:11.2.0.2-xe
+
+# run in T10-rhel-nginx-sqlplus
+-------------------------------
+
+docker run -d --name myoracle \
+  -e ORACLE_PWD=Passwd1234 \
+  -p 1521:1521 -p 9090:8080 \
+  --shm-size=2g \
+  oracle/database:11.2.0.2-xe
+
+# Console output
+----------------
+
+#########################
+DATABASE IS READY TO USE!
+#########################
+
+## To check you can correct access the database:
+------------------------------------------------
+
+you can use any oracle database client(
+        sqlplus, SQL Developer, or 
+        IntelliJ Database tools) to connect it. 
+
+
+## Get Shell and Login
+----------------------
+# We use sqlplus command in the terminal:
+---------------------------------------
+
+sqlplus sys/Passwd1234@//localhost:1521/XE as sysdba
+
+# From other Terminals:
+---------------------
+
+docker run -it f6ea5e4460f1 sh
+sqlplus sys/Passwd1234@//localhost:1521/XE as sysdba

@@ -1,0 +1,33 @@
+How to register and subscribe a RHEL system to the Red Hat Customer Portal using Red Hat Subscription-Manager?
+--------------------------------------------------------------------------------------------------------------
+
+# Environment
+-------------
+
+RHEL8
+
+# Registration Assistant
+------------------------
+
+https://access.redhat.com/labs/registrationassistant/rhel8/?tech=subscription&service=rhsm&process=sca&hasInsights=true&service_level=Premium&service_usage=Development%2FTest&service_role=Red%20Hat%20Enterprise%20Linux%20Server&select_system_purpose=1&eus=1&e4s=1
+
+1. Enable SCA for your account.
+
+    https://access.redhat.com/management
+
+2. Register a system with SCA mode.
+
+    Systems simply need to be registered (via subscription-manager), and additional repositories enabled if necessary.
+    NOTE: commands to attach subscriptions (such as subscription-manager attach --auto and/or subscription-manager attach --pool <$POOLID>) 
+    are obsolete and no longer required.
+
+# on Customer Portal
+
+    subscription-manager register --username <$INSERT_USERNAME_HERE> --password <$INSERT_PASSWORD_HERE>
+subscription-manager register --username $steveappeltants --password $Steve@20230904sudent@PXL
+
+3. Register your systems to Red Hat Insights.
+
+    insights-client --register
+
+

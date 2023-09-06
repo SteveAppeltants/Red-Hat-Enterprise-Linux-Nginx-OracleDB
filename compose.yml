@@ -1,0 +1,47 @@
+version: '3'
+services:
+  nginx:
+    build:
+      context: ./nginx
+      dockerfile: Dockerfile
+    container_name: nginx_container
+    image: my-nginx-image
+    restart: always
+    ports:
+      - "80:80"
+    environment:
+    - NGINX_HOST=foobar.com
+    - NGINX_PORT=80
+
+  oracle-db:
+    image: oracle/database:11.2.0.2-xe
+    container_name: myoracle-db
+    environment:
+      - ORACLE_PWD=Passwd1234
+    ports:
+      - "1521:1521"
+      - "9090:8080"
+    shm_size: 2g
+    networks:
+    - oracle-network
+
+  oracle-client:
+  # build:
+  #     context: ./OracleDatabase/SingleInstance/Dockerfiles
+  #     dockerfile: Dockerfile.xe
+    # command: ["./buildContainerImage.sh", "-v", "11.2.0.2", "-x", "-i"]
+    image: oracle/database:11.2.0.2-xe
+    container_name: myoracle-client
+    command: sh -c "sleep infinity"
+    environment:
+      - ORACLE_SID=ORCLCDB
+      - ORACLE_PDB=ORCLPDB1
+      - ORACLE_PWD=Passwd1234
+    networks:
+      - oracle-network
+    depends_on:
+      - oracle-db
+    stdin_open: true
+    tty: true
+networks:
+  oracle-network:
