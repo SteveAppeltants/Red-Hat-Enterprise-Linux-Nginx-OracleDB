@@ -15,7 +15,7 @@
     1. [Oracle software, Dockerfile and Scripts](#oracle-software-dockerfile-and-scripts)
     2. [Oracle-xe-11g](#oracle-xe-11g)
     3. [MD5 checksum](#md5-checksum)
-    4. [The image docker build script + zipfile](#the-image-docker-build-script)
+    4. [The Docker Image build script + zipfile](#the-docker-image-build-script)
     5. [Build The Image](#build-the-image)
         1. [Start the script](#start-the-script)
         2. [Result in the console](#result-in-the-console)
@@ -123,7 +123,7 @@ $ `https://www.iea-software.com/ftp/emeraldv5/linux/ora/`
 
 dd7881a55569d890241f11cd0eeb7d48
 
-## The image docker build script
+## The Docker Image build script
 
 OracleDatabase/SingleInstance/dockerfiles/buildContainerImage.sh<br/>
 
