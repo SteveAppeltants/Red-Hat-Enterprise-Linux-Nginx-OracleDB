@@ -5,7 +5,7 @@
 2. [Register and subscribe Red Hat Enterprise Linux for VM use](#how-to-register-and-subscribe-red-hat-enterprise-linux-for-vm-use-not-necessary-for-containers)
    1. [Registration Assistant](#registration-assistant)
         1. [Enable SCA for your account](#enable-sca-for-your-account)
-        2. [Register system with sca mode](#register-a-system-with-sca-mode)
+        2. [Register system with SCA mode](#register-a-system-with-sca-mode)
         3. [Register to Red Hat insights](#register-your-systems-to-red-hat-insights)
 3. [Red Hat Enterprise Linux](#red-hat-enterprise-linux)
     1. [Universal base image](#universal-base-image)
