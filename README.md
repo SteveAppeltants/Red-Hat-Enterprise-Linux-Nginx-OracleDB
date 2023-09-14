@@ -156,7 +156,7 @@ Oracle Database container image for 'xe' version 11.2.0.2 is ready to be extende
 ### Start the image
 To use oracle db sql*plus there must be at least 1g memory available. This configuration is set in 2g (what is necassary)
 
-**host mount point**
+**host mount point** <br/>
 `docker run --name myoracle \
 --shm-size=2g \
 -p 1521:1521 -p 9090:8080 \f
