@@ -150,8 +150,8 @@ OracleDatabase/SingleInstance/dockerfiles/11.2.0.2<br/>
 ### Result in the console
 
 Oracle Database container image for 'xe' version 11.2.0.2 is ready to be extended:<br/> 
-   oracle/database:11.2.0.2-xe
-     Build completed in 42 seconds.
+   oracle/database:11.2.0.2-xe <br/>
+     Build completed in 42 seconds. <br/>
 
 ### Start the image
 To use oracle db sql*plus there must be at least 1g memory available. This configuration is set in 2g (what is necassary)
