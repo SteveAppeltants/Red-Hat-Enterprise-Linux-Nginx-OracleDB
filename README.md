@@ -101,7 +101,7 @@ Path<br/>
 `./OracleDatabase/SingleInstance/Dockerfiles`
 
 Run script<br/>
-`./OracleDatabase/SingleInstance/Dockerfiles/buildContainerImage.sh -v 11.2.0.2 -x -i`
+`./buildContainerImage.sh -v 11.2.0.2 -x -i`
 
 ## Start NGINX based on the RHEL image
 docker-compose up -d
