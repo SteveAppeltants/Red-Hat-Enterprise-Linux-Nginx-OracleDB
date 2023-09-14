@@ -93,7 +93,7 @@ Dockerfile with authorization<br/>
 Path<br/>
 `/T10R_RHEL_Nginx_OracleDB`
 
-Run script<br/>
+Build Image<br/>
 `docker build -t my-rhel-nginx-image .`
 
 **ORACLE DATABASE**<br/>
