@@ -23,7 +23,7 @@
         4. [Console output - "Ready to use"](#console-output)
         5. [Check and access the database](#check-and-access-the-database)
 5. [Get Shell and Login](#get-shell-and-login)
-    1. [We use sqlplus command in the terminal](#we-use-sqlplus-command-in-the-terminal)
+    1. [We use SQL*PLUS command in the terminal](#we-use-sqlplus-command-in-the-terminal)
     2. [From other Terminals](#from-other-terminals)
 6. [Some SQL-commans](#some-sql-commands-to-test-your-database)
     1. [Show user](#show-user)
@@ -205,10 +205,9 @@ you can use any oracle database client(sqlplus, SQL Developer, or IntelliJ Datab
 
 # Conclusion
 
-Concluding thoughts.
+Concluding thoughts...
 
 [Jump to Table of Contents](#table-of-contents)
-
 
 [Back](/compose-learn/T10R_RHEL_Nginx_OracleDB/FAQ.md)
 [BACK](/README.md)
