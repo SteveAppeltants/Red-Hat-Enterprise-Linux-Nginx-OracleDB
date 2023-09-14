@@ -32,7 +32,7 @@
 
 # Introduction
 Setting up a Red Hat Enterprise Linux environment with a NGINX webserver and Oracle 11g SQL*PLUS database.
-The setup is unsing images to create contianers in a docker-desktop application.
+The setup is unsing images to create containers in a docker-desktop application.
 
 Reference website [Run Oracle in Docker for Local Development](https://lqiang79.medium.com/run-oracle-11g-xe-in-docker-for-local-development-702ff0bf733e)
 
