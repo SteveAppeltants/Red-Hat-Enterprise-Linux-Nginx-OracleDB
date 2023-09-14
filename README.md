@@ -157,20 +157,20 @@ Oracle Database container image for 'xe' version 11.2.0.2 is ready to be extende
 To use oracle db sql*plus there must be at least 1g memory available. This configuration is set in 2g (what is necassary)
 
 **host mount point** <br/>
-`docker run --name myoracle \
---shm-size=2g \
--p 1521:1521 -p 9090:8080 \f
--e ORACLE_PWD=mypass \
--v [<host mount point>:]/u01/app/oracle/oradata \
-oracle/database:11.2.0.2-xe`
+`docker run --name myoracle \ <br/>
+--shm-size=2g \ <br/>
+-p 1521:1521 -p 9090:8080 \f <br/>
+-e ORACLE_PWD=mypass \ <br/>
+-v [<host mount point>:]/u01/app/oracle/oradata \ <br/>
+oracle/database:11.2.0.2-xe` <br/>
 
 **run in T10-rhel-nginx-sqlplus**
 
-`docker run -d --name myoracle \
-  -e ORACLE_PWD=Passwd1234 \
-  -p 1521:1521 -p 9090:8080 \
-  --shm-size=2g \
-  oracle/database:11.2.0.2-xe`
+`docker run -d --name myoracle \ <br/>
+  -e ORACLE_PWD=Passwd1234 \ <br/>
+  -p 1521:1521 -p 9090:8080 \ <br/>
+  --shm-size=2g \ <br/>
+  oracle/database:11.2.0.2-xe` <br/>
 [Jump to Table of Contents](#table-of-contents)
 ## Console output
 #########################<br/>
