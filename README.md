@@ -16,7 +16,7 @@
     2. [Oracle-xe-11g](#oracle-xe-11g)
     3. [MD5 checksum](#md5-checksum)
     4. [The Docker Image build script + zipfile](#the-docker-image-build-script)
-    5. [Build The Image](#build-the-image)
+    5. [Build the image](#build-the-image)
         1. [Start the script](#start-the-script)
         2. [Result in the console](#result-in-the-console)
         3. [Start the image](#start-the-image)
