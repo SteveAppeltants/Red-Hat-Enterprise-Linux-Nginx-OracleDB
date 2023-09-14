@@ -104,7 +104,7 @@ Run script<br/>
 `./buildContainerImage.sh -v 11.2.0.2 -x -i`
 
 ## Start NGINX based on the RHEL image
-docker-compose up -d
+`docker-compose up -d`
 
 [Jump to Table of Contents](#table-of-contents)
 
