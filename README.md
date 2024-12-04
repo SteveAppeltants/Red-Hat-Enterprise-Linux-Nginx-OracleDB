@@ -209,7 +209,7 @@ Concluding thoughts...
 
 [Jump to Table of Contents](#table-of-contents)
 
-[Back](/compose-learn/T10R_RHEL_Nginx_OracleDB/FAQ.md)
+[FAQ](/compose-learn/T10R_RHEL_Nginx_OracleDB/FAQ.md)
 [BACK](/README.md)
 
 [Jump to Table of Contents](#table-of-contents)
